@@ -183,11 +183,11 @@ def build_model():
     #            }  
     
     parameters = {
-                    #'vect__max_df'     : (0.75, 1.0),
-                    #'vect__min_df'     : (0.001, 0.002),
-                    #'vect__ngram_range': ((1, 1),(1, 2)),  # unigrams or bigrams
-                    #'tfidf__use_idf': (True, False),
-                    #'tfidf__norm': ('l2'),
+                    'vect__max_df'     : (0.75, 1.0),
+                    'vect__min_df'     : (0.001, 0.002),
+                    'vect__ngram_range': ((1, 1),(1, 2)),  # unigrams or bigrams
+                    'tfidf__use_idf': (True, False),
+                    #'tfidf__norm': ('l2', '13'),
                     'clf__estimator__bootstrap': [True],
                     'clf__estimator__max_depth': [100],
                     'clf__estimator__max_features': [2],
