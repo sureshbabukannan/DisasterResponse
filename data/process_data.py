@@ -89,7 +89,7 @@ def save_data(df, database_filename):
     if table_name in ins.get_table_names():
         try:
             engine.execute("DROP table {}".format(table_name))
-        except e:
+        except Exception as e:
             print("Error", e)
 
     df.to_sql(table_name, engine, index=False)

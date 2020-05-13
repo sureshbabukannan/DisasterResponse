@@ -165,23 +165,7 @@ def build_model():
                 ('tfidf',TfidfTransformer()),  
                 ('clf', MultiOutputClassifier(estimator=rfc))   
             ])
-            
-    # parameter used based on best parameter returned for 
-    # RandomizedSearchCV. These were the original set of parameters
-    # used for RandomizedSearchCV
-    #parameters = {
-    #                'vect__max_df'     : (0.5, 0.75, 1.0),
-    #                'vect__ngram_range': ((1, 1),(1, 2)),  # unigrams or bigrams
-    #                'tfidf__use_idf': (True, False),
-    #                'tfidf__norm': ('l1', 'l2'),
-    #                'clf__estimator__bootstrap': [True],
-    #                'clf__estimator__max_depth': [80, 90, 100, 110],
-    #                'clf__estimator__max_features': [2, 3],
-    #                'clf__estimator__min_samples_leaf': [3, 4, 5],
-    #                'clf__estimator__min_samples_split': [8, 10, 12],
-    #                'clf__estimator__n_estimators': [100, 200, 300, 1000]
-    #            }  
-    
+               
     parameters = {
                     'vect__max_df'     : (0.75, 1.0),
                     'vect__min_df'     : (0.001, 0.002),
